@@ -93,13 +93,15 @@ Scam Token Detection & Asset Liquidity Logic
 
 <p>
 Included in the `keys` directory is a list of example keys for demo purposes. These are keys that I took from the first 
-couple of pages of the site https://keys.lol. As you can imagine, those keys are absolutely drowning in scam tokens. 
-The program has logic to discern between scam tokens and tokens with actual value. As you can see in the asciinema below, 
-the tool has managed to actually find some tokens of value in those publicly posted keys! It contains a blacklist of 
-known scam tokens which it updates at launch. Additionally, the tool will simulate a transfer by calling `web3.eth.estimate_gas`,  
+couple of pages of the site https://keys.lol. Scam tokens are a real problem and as you can imagine, those 
+keys are absolutely drowning in them. The program has logic to discern between scam tokens and 
+tokens with actual value. As you can see in the asciinema below, the tool has managed to actually find some 
+tokens of value in those publicly posted keys! </p>
+<p>
+It contains a blacklist of known scam tokens which it updates at launch. Additionally, the tool will simulate a transfer by calling `web3.eth.estimate_gas`,  
 and if transfer fails, then the token is assumed to be a fake scam token and is not included in the report by default. 
 Furthermore, the ZRX api is queried to ascertain whether or not this token is listed on a dex and can actually be traded. 
-Tokens that do not have any value are not included by default in the final report. 
+The generated report has fields "movable" and "swappable" to tell you which assets are legit.
 </p>
 
 <b>
@@ -115,6 +117,16 @@ Session files are created automatically and placed in the sessions directory.
 #### Asciinema Demo
 
 [![asciicast](https://asciinema.org/a/BYipIlrq7ictgLL9D90DvXcxt.svg)](https://asciinema.org/a/BYipIlrq7ictgLL9D90DvXcxt)
+
+### TODO
+
+<p>
+There are still a few minor implementations that need to happen. If you'd like to contribute, this is the place to 
+start:
+</p>
+
+- Implement logic to get native asset price for the rest of the chains. Currently this only works on 
+ ethereum, polygon, and binance chain.
 
 
 ### Contact Me
