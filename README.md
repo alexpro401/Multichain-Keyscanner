@@ -95,7 +95,7 @@ Scam Token Detection Logic
 Included in the `keys` directory is a list of example keys for demo purposes. These are keys that I took from the first 
 couple of pages of the site https://keys.lol. As you can imagine, those keys are absolutely drowning in scam tokens. 
 The program has logic to discern between scam tokens and tokens with actual value. As you can see in the asciinema below, 
-the tool has managed some tokens that are actually valuable in those publicly posted keys! It contains a blacklist of 
+the tool has managed to actually find some tokens of value in those publicly posted keys! It contains a blacklist of 
 known scam tokens which it updates at launch. Additionally, the tool will simulate a transfer by calling `web3.eth.estimate_gas`,  
 and if transfer fails, then the token is assumed to be a fake scam token and is not included in the report by default. 
 Likewise, tokens that do not have any value are not included by default in the final report. However, 

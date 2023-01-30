@@ -700,6 +700,7 @@ class MultiChainScanner:
                     pass
                 else:
                     addr = acct.address
+                    print(addr)
                     if find:
                         if to_checksum_address(addr) == to_checksum_address(find.strip("\r\n")):
                             return line
