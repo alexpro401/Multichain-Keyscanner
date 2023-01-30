@@ -697,10 +697,16 @@ class MultiChainScanner:
                     acct = web3.eth.Account.from_key(line)
                     #acct = web3.eth.Eth.account.from_key(line)
                 except (binascii.Error, ValueError):
+                    try:
+                        line = to_checksum_address(line)
+                    except ValueError:
+                        pass
+                    else:
+                        addresses.append(line)
                     pass
                 else:
                     addr = acct.address
-                    print(addr)
+                    # print(addr)
                     if find:
                         if to_checksum_address(addr) == to_checksum_address(find.strip("\r\n")):
                             return line
