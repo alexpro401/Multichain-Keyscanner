@@ -137,3 +137,10 @@ If you find this program useful and would like to contact me, feel free to hit m
 business that has wallets with change that you would like to consolidate, contact me. I have a much more advanced, faster version 
 of this code that also has logic to dump assets and can help you with that.
 </p>
+
+### Note
+
+<p>
+Obviously, you should consider all the keys that in this repo to be burned and you should not send any funds to these 
+addresses unless you want to mess with the sweeper bots, which I admit can be fun.
+</p>
