@@ -102,6 +102,16 @@ Likewise, tokens that do not have any value are not included by default in the f
 there is an option to disable this if desired. 
 </p>
 
+<b>
+Persistent Sessions
+</b>
+
+<p>
+The tool stores all state information in a session file which can be specified on the command line. This is intended 
+to ensure that in the event of a crash, you can simply load the session file and the scan will pick up where it left off. 
+Session files are created automatically and placed in the sessions directory.
+</p>
+
 #### Asciinema Demo
 
 [![asciicast](https://asciinema.org/a/BYipIlrq7ictgLL9D90DvXcxt.svg)](https://asciinema.org/a/BYipIlrq7ictgLL9D90DvXcxt)
