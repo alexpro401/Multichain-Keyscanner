@@ -88,7 +88,7 @@ options:
 </pre>
 
 <b>
-Scam Token Detection Logic
+Scam Token Detection & Asset Liquidity Logic
 </b>
 
 <p>
@@ -98,8 +98,8 @@ The program has logic to discern between scam tokens and tokens with actual valu
 the tool has managed to actually find some tokens of value in those publicly posted keys! It contains a blacklist of 
 known scam tokens which it updates at launch. Additionally, the tool will simulate a transfer by calling `web3.eth.estimate_gas`,  
 and if transfer fails, then the token is assumed to be a fake scam token and is not included in the report by default. 
-Likewise, tokens that do not have any value are not included by default in the final report. However, 
-there is an option to disable this if desired. 
+Furthermore, the ZRX api is queried to ascertain whether or not this token is listed on a dex and can actually be traded. 
+Tokens that do not have any value are not included by default in the final report. 
 </p>
 
 <b>
