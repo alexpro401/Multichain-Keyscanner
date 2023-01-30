@@ -58,7 +58,8 @@ In order to run this, you need the following API keys:
   - Websocket endpoint
 
 <p>
-Copy env.example to .env and add your api keys.
+Copy env.example to .env and add your api keys. For each chain you intend to scan, add an env variable network_http_endpoint, 
+and network_ws_endpoint, ie "ethereum_http_endpoint".
 </p>
 
 

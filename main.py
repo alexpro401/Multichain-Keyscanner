@@ -267,7 +267,7 @@ class ScanReport:
         Dump the json report to disc
         :return:
         """
-        with open(self.session.output_file, 'w') as f:
+        with open(f'{self.session.output_file}', 'w') as f:
             json.dump(self.session.report_dict, f)
 
     async def async_load_report(self):
